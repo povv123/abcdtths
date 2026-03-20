@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/abcdtths/static/css/main.2746b44d.css",
+    "main.js": "/abcdtths/static/js/main.f9741e28.js",
+    "static/js/453.cc28b035.chunk.js": "/abcdtths/static/js/453.cc28b035.chunk.js",
+    "static/media/pexels-tima-miroshnichenko-5428012.jpg": "/abcdtths/static/media/pexels-tima-miroshnichenko-5428012.3945448799569bf8861c.jpg",
+    "static/media/pexels-minan1398-771317.jpg": "/abcdtths/static/media/pexels-minan1398-771317.96409531c39d1ef67467.jpg",
+    "index.html": "/abcdtths/index.html",
+    "main.2746b44d.css.map": "/abcdtths/static/css/main.2746b44d.css.map",
+    "main.f9741e28.js.map": "/abcdtths/static/js/main.f9741e28.js.map",
+    "453.cc28b035.chunk.js.map": "/abcdtths/static/js/453.cc28b035.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2746b44d.css",
+    "static/js/main.f9741e28.js"
+  ]
+}
