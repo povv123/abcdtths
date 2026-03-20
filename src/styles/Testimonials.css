@@ -1,0 +1,121 @@
+.testimonials-page {
+  padding-bottom: 80px;
+}
+
+.testimonials-hero {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #f8fafc;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: -40px; /* Overlap the hero section */
+  padding-bottom: 60px;
+}
+
+.story-card {
+  background: white;
+  border-radius: 40px;
+  border: 2px solid #e5e7eb;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.story-card:hover {
+  border-color: #52d38a;
+  transform: translateY(-10px);
+}
+
+.story-image {
+  position: relative;
+  height: 250px;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.outcome-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #004a99; /* Navy */
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.story-content {
+  padding: 30px;
+}
+
+.rating-stars {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.story-quote {
+  font-style: italic;
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+.student-name {
+  margin: 0;
+  color: #004a99;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.student-grade {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Stats Strip */
+.stats-strip {
+  background: #004a99;
+  padding: 60px 0;
+  color: white;
+  text-align: center;
+}
+
+.stats-flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+  color: #52d38a;
+}
+
+.stat-item p {
+  margin-top: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+  .stories-grid {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+:root {
+  --nav-bg: #004a99;      /* Classic USA Academic Navy */
+  --nav-text: #ffffff;
+  --nav-hover: #52d38a;   /* Your brand accent green */
+  --nav-height: 80px;
+}
+
+/* Base Reset */
+* { box-sizing: border-box; }
+
+.navbar {
+  height: var(--nav-height);
+  background-color: var(--nav-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- LOGO --- */
+.logo {
+  color: white;
+  /* Fluid font size for logo: small on mobile, large on desktop */
+  font-size: clamp(1.2rem, 5vw, 1.5rem); 
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* --- NAVIGATION LINKS --- */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--nav-text);
+  font-weight: 600;
+  /* Adjusts slightly based on screen width */
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem); 
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 8px 0;
+}
+
+/* Academic underline effect */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--nav-hover);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+  color: var(--nav-hover);
+}
+
+/* --- MOBILE MENU ICON --- */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* --- RESPONSIVE DESIGN (Tablets & Phones) --- */
+@media (max-width: 1024px) {
+  .nav-links li {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 850px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    right: -100%;
+    flex-direction: column;
+    background-color: var(--nav-bg);
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    text-align: center;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px 20px;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.2);
+    overflow-y: auto; /* Scrollable if links are many */
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    width: 100%;
+  }
+
+  .nav-links a {
+    /* Larger font on mobile for easier finger tapping */
+    font-size: 1.2rem;
+    padding: 12px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Remove underline effect on mobile for cleaner look */
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+}
+
+/* Specific fix for very small phones */
+@media (max-width: 380px) {
+  .logo {
+    font-size: 1.1rem;
+  }
+  .navbar {
+    padding: 0 15px;
+  }
+}

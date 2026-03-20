@@ -1,0 +1,273 @@
+/* --- GLOBAL PAGE SETUP --- */
+.tutoring-page {
+  padding-bottom: 80px;
+  background-color: #ffffff;
+}
+
+.tutoring-hero {
+  background-color: #f8fafc;
+  padding: clamp(60px, 10vw, 100px) 0;
+  text-align: center;
+}
+
+/* --- GRID & CARD SECTION --- */
+.tutoring-grid-section {
+  margin-top: -60px; /* Modern overlap look */
+  padding-bottom: 60px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Updated Card with Image Support */
+.tutoring-card {
+  background: white;
+  border-radius: 35px;
+  border: 2px solid #e5e7eb;
+  overflow: hidden; /* Clips the image to the border radius */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.tutoring-card:hover {
+  border-color: #52d38a;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Thumbnail Container */
+.card-thumb {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tutoring-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tutoring-card:hover .tutoring-pic {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.tutoring-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #004a99; /* Academic Navy */
+  margin-bottom: 15px;
+}
+
+.tutoring-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* --- BENEFITS SECTION --- */
+.tutoring-benefits {
+  padding: 80px 0;
+}
+
+.benefits-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(30px, 5vw, 80px);
+  align-items: center;
+}
+
+.benefits-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.modern-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.modern-list li {
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+  color: #444;
+  position: relative;
+  padding-left: 35px;
+  font-size: 1rem;
+}
+
+.modern-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #52d38a;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* --- REQUEST BUTTON STYLE --- */
+.btn-req-tutor {
+  background-color: #004a99; /* Navy */
+  color: white;
+  padding: 18px 45px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 74, 153, 0.2);
+}
+
+.btn-req-tutor:hover {
+  background-color: #52d38a; /* Swaps to green */
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(82, 211, 138, 0.3);
+}
+
+/* Benefit Image Styling */
+.benefits-image-placeholder {
+  flex: 1;
+  min-width: 320px;
+  height: 450px;
+  border-radius: 40px;
+  overflow: hidden;
+  border: 2px solid #e5e7eb;
+}
+
+.benefits-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* --- STUDENT EXPERIENCE (MINI STORIES) --- */
+.mini-stories-section {
+  padding: 80px 0;
+  background-color: #f0f9ff; /* Softest Sky Blue background */
+  overflow: hidden;
+}
+
+.centered {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.text-green {
+  color: #52d38a;
+}
+
+.stories-ticker {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 20px 5%;
+  scrollbar-width: none; /* Firefox */
+}
+
+.stories-ticker::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.mini-story-bubble {
+  min-width: 300px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 25px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.05); /* Very subtle sky blue shadow */
+  transition: all 0.3s ease;
+}
+
+.mini-story-bubble:hover {
+  transform: translateY(-5px);
+  border-color: #0ea5e9; /* Sky Blue border on hover */
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.1);
+}
+
+.story-tag {
+  background: #e0f2fe; /* Light sky blue tag */
+  color: #0369a1; /* Deep blue text */
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 50px;
+  width: fit-content;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mini-story-bubble p {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.story-author {
+  font-weight: 700;
+  color: #004a99; /* Navy Blue */
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.story-author::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: #52d38a; /* Green dash for accent */
+}
+
+/* --- MOBILE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .mini-stories-section {
+    padding: 60px 0;
+  }
+  
+  .mini-story-bubble {
+    min-width: 260px;
+    padding: 20px;
+  }
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .tutoring-hero {
+    padding: 60px 20px;
+  }
+  
+  .tutoring-grid-section {
+    margin-top: 0; /* Remove overlap on small screens */
+    padding: 0 20px;
+  }
+
+  .btn-req-tutor {
+    width: 100%; /* Full width for thumbs on mobile */
+    text-align: center;
+  }
+
+  .benefits-image-placeholder {
+    height: 300px;
+  }
+}

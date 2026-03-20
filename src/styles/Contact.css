@@ -1,0 +1,119 @@
+/* --- GLOBAL CONTACT WRAPPER --- */
+.contact-page-wrapper {
+  background-color: #ffffff;
+}
+
+/* --- SECTION 1: BOOK A CLASS --- */
+.contact-section {
+  background: var(--brand-dark-blue);
+  padding: clamp(40px, 8vw, 80px) 0;
+  color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.form-inner-title {
+  color: var(--text-main);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+/* --- SECTION 2: ASK A QUESTION SLIDE --- */
+.ask-question-slide {
+  padding: clamp(50px, 10vw, 100px) 0;
+  background-color: #f9fafb;
+}
+
+.ask-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: clamp(25px, 5vw, 50px);
+  border-radius: 40px;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.ask-header-center {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* --- FORM COMPONENTS --- */
+.booking-form, .ask-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr; /* Stacked on mobile */
+  gap: 15px;
+}
+
+.booking-form input, .ask-form input, 
+.booking-form select, .ask-form textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* Fluid font size */
+}
+
+/* --- BUTTONS --- */
+.btn-submit, .btn-ask-submit {
+  padding: 16px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-submit { background: #52d38a; color: white; }
+.btn-ask-submit { 
+  background: var(--brand-dark-blue); 
+  color: white; 
+  margin-top: 10px;
+}
+
+.btn-submit:hover, .btn-ask-submit:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (min-width: 850px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr 1fr; /* Side-by-side on desktop */
+  }
+
+  .contact-form-box {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ask-box {
+    border-radius: 25px;
+    padding: 20px;
+  }
+  
+  .title-bold {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,45 @@
+.footer {
+  /* Using the Navy color from your Navbar for consistency */
+  background-color: #000000; 
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; /* Pushes footer to bottom if content is short */
+  border-top: 4px solid #52d38a; /* Your brand green accent line */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-main-text {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+  /* Scales font: small on phone, medium on laptop */
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  text-transform: uppercase;
+}
+
+.footer-sub-text {
+  margin: 0;
+  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+/* --- Support for All Devices --- */
+@media (max-width: 600px) {
+  .footer {
+    padding: 30px 15px; /* More breathing room for small phones */
+  }
+  
+  .footer-main-text {
+    line-height: 1.4;
+  }
+}

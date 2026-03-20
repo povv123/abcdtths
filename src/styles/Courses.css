@@ -1,0 +1,75 @@
+/* Container and Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Forces 3 items per line */
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 992px) {
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+
+/* Card Styling */
+.pricing-card-simple {
+  background: #fff;
+  border: 1px solid #e2e8f0; /* Soft border */
+  border-radius: 12px;
+  padding: 32px 24px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Border Active Effect on Hover */
+.pricing-card-simple:hover {
+  border-color: #111;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.price-tag .amount {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111;
+}
+
+/* Black Button Style */
+.btn-action-black {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.btn-action-black:hover {
+  opacity: 0.9;
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  color: #4a5568;
+}
+
+.check-icon {
+  margin-right: 10px;
+  color: #111;
+  font-size: 0.8rem;
+}
