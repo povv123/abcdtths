@@ -34,7 +34,7 @@ const courses = [
         </div>
       </header>
 
-      {/* --- SLIDE 2: POPULAR COURSES --- */}
+      {/* --- SLIDE 2: --- */}
       <section className="courses-section container">
         <div className="section-header">
          
@@ -60,7 +60,7 @@ const courses = [
         </div>
       </section>
 
-      {/* --- SLIDE 3: WHY CHOOSE US --- */}
+      {/* --- SLIDE 3--- */}
       <section className="benefits-section">
         <div className="container">
           <div className="section-header">
@@ -78,7 +78,7 @@ const courses = [
         </div>
       </section>
 
-      {/* --- SLIDE 4: OUR MISSION (Based on your RUPP Scan) --- */}
+      {/* --- SLIDE 4: OUR MISSION--- */}
       <section className="mission-section-new">
         <div className="container mission-grid">
           <div className="mission-text-box">
